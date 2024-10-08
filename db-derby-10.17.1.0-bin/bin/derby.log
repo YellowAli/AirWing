@@ -1,0 +1,14 @@
+Thu Aug 29 16:42:45 EDT 2024 : Apache Derby Network Server - 10.17.1.0 - (1913217) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+Thu Aug 29 16:42:51 EDT 2024:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.17.1.0 - (1913217): instance a816c00e-0191-9fe0-5780-00000f5f9d08 
+on database directory /Users/alielgalad/Desktop/Data Structures and Algos/AirPlaneApplication copy/db-derby-10.17.1.0-bin/bin/AirplaneApplicationDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@18769467 
+Loaded from file:/Users/alielgalad/Desktop/Data%20Structures%20and%20Algos/AirPlaneApplication%20copy/db-derby-10.17.1.0-bin/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=22.0.1+8-16
+user.dir=/Users/alielgalad/Desktop/Data Structures and Algos/AirPlaneApplication copy/db-derby-10.17.1.0-bin/bin
+os.name=Mac OS X
+os.arch=aarch64
+os.version=14.5
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

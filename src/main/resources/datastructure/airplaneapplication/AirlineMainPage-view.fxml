@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="datastructure.airplaneapplication.AirlineMainPageController">
+   <children>
+      <MenuBar layoutY="1.0" prefHeight="28.0" prefWidth="600.0">
+        <menus>
+          <Menu fx:id="flights" mnemonicParsing="false" text="Flights">
+            <items>
+              <MenuItem fx:id="Flights" mnemonicParsing="false" onAction="#onClick" text="Establish Flight" />
+                  <MenuItem fx:id="Flights" mnemonicParsing="false" text="Modify/View Flights" />
+            </items>
+          </Menu>
+          <Menu fx:id="planes" mnemonicParsing="false" text="Planes">
+            <items>
+              <MenuItem fx:id="Plane" mnemonicParsing="false" text="Add Planes" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

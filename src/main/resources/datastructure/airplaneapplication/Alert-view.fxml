@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="260.0" prefWidth="411.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="datastructure.airplaneapplication.AlertController">
+   <children>
+      <Label layoutX="40.0" layoutY="14.0" text="There Seems To Be A Problem ">
+         <font>
+            <Font name="Adelle Sans Devanagari Semibold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="error" alignment="CENTER" layoutX="20.0" layoutY="173.0" prefHeight="75.0" prefWidth="372.0" textAlignment="CENTER" textFill="#ae5353" wrapText="true">
+         <font>
+            <Font name="Adelle Sans Devanagari Semibold" size="16.0" />
+         </font></Label>
+      <ImageView fitHeight="104.0" fitWidth="117.0" layoutX="154.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@sadFace.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="datastructure.airplaneapplication.ModifyController">
+   <children>
+      <Label layoutX="138.0" layoutY="14.0" text="Modify Chosen Flight" textFill="#ae5353">
+         <font>
+            <Font name="Adelle Sans Devanagari Regular" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="93.0" text="Flight Ref ID:" />
+      <TextField fx:id="flightRefIdField" editable="false" layoutX="170.0" layoutY="89.0" />
+      <Label layoutX="32.0" layoutY="131.0" text="Departure location:" />
+      <ComboBox fx:id="departureLocationCombo" editable="true" layoutX="180.0" layoutY="127.0" prefWidth="150.0" />
+      <Label layoutX="32.0" layoutY="174.0" text="Date Of Departure:" />
+      <DatePicker fx:id="dateOfDepartureDatePicker" layoutX="144.0" layoutY="170.0" />
+      <Label layoutX="32.0" layoutY="249.0" text="Arrival Location:" />
+      <ComboBox fx:id="arrivalLocationCombo" editable="true" layoutX="180.0" layoutY="244.0" prefWidth="150.0" />
+      <Label layoutX="29.0" layoutY="287.0" text="Severity Of Change:" />
+      <ComboBox fx:id="severityOfChangeCombo" layoutX="180.0" layoutY="282.0" prefWidth="150.0" />
+      <Label layoutX="32.0" layoutY="325.0" text="Plane:" />
+      <ComboBox fx:id="planeCombo" layoutX="180.0" layoutY="320.0" prefWidth="150.0" />
+      <Label layoutX="32.0" layoutY="363.0" text="Status Of Flight:" />
+      <ComboBox fx:id="statusOfFlightCombo" layoutX="180.0" layoutY="358.0" prefWidth="150.0" />
+      <Label layoutX="442.0" layoutY="85.0" text="Date Of Arrival:" />
+      <Label layoutX="449.0" layoutY="257.0" text="Next Flight:" />
+      <Label layoutX="438.0" layoutY="166.0" text="Time Of Arrival:" />
+      <TextField fx:id="nextFlightText" editable="false" layoutX="400.0" layoutY="274.0" />
+      <Button layoutX="455.0" layoutY="320.0" mnemonicParsing="false" text="Cancel" />
+      <Button layoutX="461.0" layoutY="358.0" mnemonicParsing="false" text="Save" />
+      <Label layoutX="34.0" layoutY="213.0" text="TimeOfDeparture:" />
+      <ComboBox fx:id="timeOfDepartureComboBox" layoutX="144.0" layoutY="209.0" prefWidth="150.0" />
+      <CheckBox fx:id="PmOrAm" layoutX="309.0" layoutY="213.0" mnemonicParsing="false" text="PM" />
+      <DatePicker fx:id="dateOfArrivalText" layoutX="387.0" layoutY="110.0" />
+      <ComboBox fx:id="timeOfArrivalText" layoutX="393.0" layoutY="187.0" prefWidth="150.0" />
+      <CheckBox fx:id="PmOrAm1" layoutX="552.0" layoutY="191.0" mnemonicParsing="false" text="PM" />
+   </children>
+</AnchorPane>

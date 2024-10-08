@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="436.0" prefWidth="775.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="datastructure.airplaneapplication.IntermediateRegisterController">
+   <children>
+      <Label layoutX="295.0" layoutY="-4.0" text="Welcome" textFill="#ae5353">
+         <font>
+            <Font name="Adelle Sans Devanagari Semibold" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="260.0" layoutY="68.0" text="Tell Us A Little About Yourself !" textFill="#514e4e">
+         <font>
+            <Font name="Adelle Sans Devanagari Regular" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="162.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Screenshot%202024-05-01%20at%204.36.31%E2%80%AFPM.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="159.0" fitWidth="169.0" layoutX="433.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Screenshot%202024-05-01%20at%204.36.40%E2%80%AFPM.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="airlineLabel" layoutX="162.0" layoutY="301.0" text="I am an Airline Company">
+         <font>
+            <Font name="Adelle Sans Devanagari Semibold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="travellerLabel" layoutX="461.0" layoutY="301.0" text="I am a Traveller">
+         <font>
+            <Font name="Adelle Sans Devanagari Semibold" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

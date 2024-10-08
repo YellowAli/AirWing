@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="428.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="datastructure.airplaneapplication.PlaneController">
+   <children>
+      <MenuBar prefHeight="28.0" prefWidth="680.0" stylesheets="@MenuBar.css">
+        <menus>
+          <Menu mnemonicParsing="false" text="Flights">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Establish Flight" />
+                  <MenuItem mnemonicParsing="false" text="Modify/View Flights" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Planes">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Add Planes" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TextField fx:id="SearchBar" alignment="CENTER" layoutX="210.0" layoutY="38.0" onAction="#onSearch" prefHeight="31.0" prefWidth="288.0" promptText="Search...">
+         <font>
+            <Font name="Adelle Sans Devanagari Semibold" size="12.0" />
+         </font>
+      </TextField>
+      <Label layoutX="321.0" layoutY="99.0" text="Model" textFill="#ae5353">
+         <font>
+            <Font name="Adelle Sans Devanagari Semibold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="169.0" text="Type:" textFill="#ae5353" />
+      <TextArea fx:id="Type" editable="false" layoutX="106.0" layoutY="154.0" prefHeight="48.0" prefWidth="200.0" wrapText="true" />
+      <Label layoutX="17.0" layoutY="247.0" text="Performance:" textFill="#ae5353" />
+      <TextArea fx:id="Performance" editable="false" layoutX="106.0" layoutY="226.0" prefHeight="78.0" prefWidth="200.0" wrapText="true" />
+      <Label layoutX="10.0" layoutY="332.0" text="Cruising Speed:" textFill="#ae5353" />
+      <TextField fx:id="CruisingSpeed" layoutX="107.0" layoutY="328.0" prefHeight="26.0" prefWidth="200.0" />
+      <Label layoutX="376.0" layoutY="170.0" text="Weight:" textFill="#ae5353" />
+      <TextArea fx:id="Weight" editable="false" layoutX="432.0" layoutY="154.0" prefHeight="48.0" prefWidth="200.0" wrapText="true" />
+      <Label layoutX="358.0" layoutY="239.0" text="Dimension:" textFill="#ae5353" />
+      <TextArea fx:id="Dimension" editable="false" layoutX="432.0" layoutY="225.0" prefHeight="78.0" prefWidth="200.0" wrapText="true" />
+      <Label layoutX="384.0" layoutY="335.0" text="Passenger Capacity:" textFill="#ae5353" />
+      <Label layoutX="382.0" layoutY="386.0" text="Flight Crew Capacity:" textFill="#ae5353" />
+      <TextField fx:id="passengerCapacity" layoutX="506.0" layoutY="330.0" prefHeight="26.0" prefWidth="126.0" />
+      <TextField fx:id="flightCrewCapacity" layoutX="506.0" layoutY="381.0" prefHeight="26.0" prefWidth="126.0" />
+      <ListView fx:id="SearchList" layoutX="210.0" layoutY="69.0" maxHeight="1.7976931348623157E308" onMouseClicked="#onClick" onMouseEntered="#onClick" onMousePressed="#onClick" prefHeight="26.0" prefWidth="288.0" />
+      <Button layoutX="149.0" layoutY="375.0" mnemonicParsing="false" onAction="#buttonClicked" text="Add To Garage" textFill="#ae5353">
+         <font>
+            <Font name="Adelle Sans Devanagari Semibold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="datastructure.airplaneapplication.FlightsController">
+
+    <AnchorPane layoutY="29.0" minHeight="0.0" minWidth="0.0" prefHeight="339.0" prefWidth="1080.0">
+        <children>
+            <TabPane fx:id="tabPane" layoutY="-1.0" prefHeight="362.0" prefWidth="1080.0" side="LEFT" stylesheets="@TabPaneStyling.css" tabClosingPolicy="UNAVAILABLE">
+                <tabs>
+                    <Tab>
+                        <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="338.0" prefWidth="891.0">
+                                <children>
+                                    <TableView fx:id="FlightsTable" layoutX="16.0" layoutY="34.0" prefHeight="205.0" prefWidth="987.0">
+                                        <columns>
+                                            <TableColumn fx:id="DepartureColumn" prefWidth="154.0" text="Departure Location:" />
+                                            <TableColumn fx:id="DateDepartureColumn" prefWidth="140.0" text="Date of Departure:" />
+                                            <TableColumn fx:id="TimeDepartureColumn" prefWidth="154.0" text="Time of Departure" />
+                                            <TableColumn fx:id="ArrivalToColumn" prefWidth="154.0" text="Arrival To:" />
+                                            <TableColumn fx:id="FrequencyOfTravelColumn" prefWidth="155.0" text="Frequency Of Travel" />
+                                 <TableColumn fx:id="PlaneColumn" prefWidth="96.0" text="Plane" />
+                                 <TableColumn fx:id="TimeuntilReturnColumn" prefWidth="133.0" text="Time Until Return" />
+                                        </columns>
+                                    </TableView>
+                           <DatePicker fx:id="DODeparture" layoutX="170.0" layoutY="239.0" prefHeight="26.0" prefWidth="140.0" />
+                           <ComboBox fx:id="TimeOfDeparture" layoutX="310.0" layoutY="239.0" prefHeight="26.0" prefWidth="116.0" />
+                           <ComboBox fx:id="ArrivalTo" editable="true" layoutX="470.0" layoutY="239.0" onAction="#onEditOfArrivalLocationSearchBar" prefHeight="26.0" prefWidth="148.0" promptText="City" />
+                           <ComboBox fx:id="Frequency" layoutX="618.0" layoutY="239.0" prefWidth="155.0" />
+                           <CheckBox fx:id="PmOrAm" layoutX="426.0" layoutY="243.0" mnemonicParsing="false" text="PM" />
+                           <Label layoutX="178.0" layoutY="283.0" text="Date Of Arrival:" />
+                           <TextField fx:id="DateOfArrival" editable="false" layoutX="266.0" layoutY="279.0" />
+                           <Label layoutX="443.0" layoutY="284.0" text="Time Of Arrival:" />
+                           <TextField fx:id="TimeOfArrival" layoutX="531.0" layoutY="281.0" />
+                           <ComboBox fx:id="Plane" layoutX="773.0" layoutY="239.0" prefHeight="26.0" prefWidth="96.0" />
+                           <Button fx:id="Add" layoutX="784.0" layoutY="271.0" mnemonicParsing="false" onAction="#add" prefHeight="26.0" prefWidth="74.0" text="Add" />
+                           <Button fx:id="Save" layoutX="784.0" layoutY="305.0" mnemonicParsing="false" onAction="#save" prefHeight="26.0" prefWidth="74.0" text="Save" />
+                           <TextField fx:id="DepartureFrom" editable="false" layoutX="16.0" layoutY="239.0" prefHeight="26.0" prefWidth="154.0" />
+                           <ComboBox fx:id="TimeUntilReturn" layoutX="869.0" layoutY="239.0" prefHeight="26.0" prefWidth="134.0" />
+                                </children>
+                            </AnchorPane>
+                        </content>
+                        <graphic>
+                            <ImageView fitHeight="64.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@Plane.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                    </Tab>
+                    <Tab id="tab2">
+                        <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="361.0" prefWidth="1010.0">
+                        <children>
+                           <Label layoutX="322.0" text="Pick a Flight To Modify" textFill="#ae5353">
+                              <font>
+                                 <Font name="Adelle Sans Devanagari Regular" size="36.0" />
+                              </font>
+                           </Label>
+                           <TableView fx:id="tableOfCurrentFlights" layoutX="14.0" layoutY="70.0" prefHeight="200.0" prefWidth="987.0">
+                             <columns>
+                               <TableColumn fx:id="flightRefColumn" prefWidth="160.0" text="Flight Ref" />
+                               <TableColumn fx:id="departureColumn" prefWidth="182.0" text="Departure Location" />
+                                 <TableColumn fx:id="dateOfDepartureColumn" prefWidth="190.0" text="Date Of Departure" />
+                                 <TableColumn fx:id="timeOfDepartureColumn" prefWidth="105.0" text="Time Of Departure" />
+                                 <TableColumn fx:id="arrivalToColumn" prefWidth="186.0" text="Arrival To: " />
+                                 <TableColumn fx:id="planeColumn" prefWidth="163.0" text="Plane" />
+                             </columns>
+                           </TableView>
+                           <Label layoutX="356.0" layoutY="281.0" text="Search Criteria " textFill="#ae5353">
+                              <font>
+                                 <Font name="Academy Engraved LET Plain:1.0" size="18.0" />
+                              </font>
+                           </Label>
+                           <TextField fx:id="flightRefText" alignment="CENTER" layoutX="14.0" layoutY="322.0" prefWidth="160.0" promptText="Flight Ref" />
+                           <Button layoutX="480.0" layoutY="283.0" mnemonicParsing="false" onAction="#onSearch" text="Search" />
+                           <ComboBox fx:id="departureLocationCombo" editable="true" layoutX="174.0" layoutY="322.0" onAction="#onEditOfDepartureLocationSearchBar" prefHeight="26.0" prefWidth="182.0" promptText="Departure Location" />
+                           <ComboBox fx:id="arrivalToCombo" editable="true" layoutX="647.0" layoutY="322.0" onAction="#onEditOfArrivalLocationSearchBar2" prefHeight="26.0" prefWidth="186.0" promptText="Arrival Location" />
+                           <ComboBox fx:id="timeOfDepartureCombo" layoutX="546.0" layoutY="322.0" prefHeight="26.0" prefWidth="102.0" />
+                           <CheckBox fx:id="pm$AmCheck" layoutX="606.0" layoutY="300.0" mnemonicParsing="false" text="PM" />
+                           <DatePicker fx:id="dateOfDepartureDatePicker" layoutX="355.0" layoutY="322.0" prefHeight="26.0" prefWidth="191.0" />
+                           <Button layoutX="941.0" layoutY="284.0" mnemonicParsing="false" onAction="#onModify" text="Modify" />
+                           <ComboBox fx:id="planeCombo" layoutX="833.0" layoutY="323.0" prefWidth="163.0" promptText="Plane" />
+                           <Button layoutX="546.0" layoutY="283.0" mnemonicParsing="false" onAction="#onReset" text="Reset" />
+                        </children></AnchorPane>
+                        </content>
+                        <graphic>
+                            <ImageView fx:id="Modify$Edit" fitHeight="56.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@Notebook.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                    </Tab>
+                </tabs>
+            </TabPane>
+        </children></AnchorPane>
+   <MenuBar prefHeight="28.0" prefWidth="1080.0" stylesheets="@MenuBar.css">
+     <menus>
+       <Menu mnemonicParsing="false" text="File">
+         <items>
+           <MenuItem mnemonicParsing="false" text="Close" />
+         </items>
+       </Menu>
+       <Menu mnemonicParsing="false" text="Edit">
+         <items>
+           <MenuItem mnemonicParsing="false" text="Delete" />
+         </items>
+       </Menu>
+       <Menu mnemonicParsing="false" text="Help">
+         <items>
+           <MenuItem mnemonicParsing="false" text="About" />
+         </items>
+       </Menu>
+     </menus>
+   </MenuBar>
+
+</AnchorPane>
